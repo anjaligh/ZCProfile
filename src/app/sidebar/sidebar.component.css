@@ -1,0 +1,38 @@
+.container1 {
+  display: flex;
+}
+
+.sidebar {
+  margin: auto;
+  padding-top:1%; ;
+  width: 70px;
+  text-align: center;
+  background-color: #095095;
+  position: absolute;
+  height: 100%;
+}
+.img{
+  border-radius: 8px;
+}
+.sidebar a {
+  display: block;
+  color: rgb(175, 173, 173);
+  margin: 20px 0px;
+  padding: 10px 0px;
+}
+
+.sidebar a.active {
+  color: white;
+}
+
+.sidebar a:hover:not(.active) {
+  color: white;
+}
+.right{
+  display: flex;
+}
+fa-icon {
+  width: 25px;
+  height: 25px;
+  margin: auto;
+}
