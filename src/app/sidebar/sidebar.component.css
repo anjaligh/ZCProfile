@@ -3,12 +3,12 @@
 }
 
 .sidebar {
-  margin: auto;
   padding-top:1%; ;
   width: 70px;
   text-align: center;
   background-color: #095095;
   position: absolute;
+  top: 0px;
   height: 100%;
 }
 .img{
@@ -29,7 +29,13 @@
   color: white;
 }
 .right{
-  display: flex;
+  position: relative;
+  top: auto;
+  left: 70px;
+  /* width: 83.9vw;
+  height: 100vh; */
+  background-color: #ffffff;
+  
 }
 fa-icon {
   width: 25px;

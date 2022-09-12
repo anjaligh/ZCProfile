@@ -1,1 +1,58 @@
-<p>profile works!</p>
+<div class="container1" >
+    <div class="row justify-content-md-center">
+        <div class="col-3 " >
+            <div class="column1">
+                <div  *ngFor="let i of candidateData">
+                    <br>
+                    <div class="basicdata">
+                        <img class="avatar1"src="{{i.avatar}}" alt="">
+                    </div><br>
+                    <div class="basicdata">
+                        <h5>{{i.first_name}} {{i.last_name}}</h5>
+                    </div>
+                    <div class="basicdata">
+                        <div class="contact-btn">
+                            <fa-icon [icon]="faPhoneVolume"></fa-icon>
+                        </div>
+                        <div class="contact-btn">
+                            <fa-icon [icon]="faEnvelope"></fa-icon>
+                        </div>
+                    </div>
+                <hr>
+                <div class="contact-details">
+                    <p><fa-icon class="icon2" [icon]="faPhone"></fa-icon> +91 {{i.phone_number}}</p>
+                    <p><fa-icon class="icon2"[icon]="faEnvelope"></fa-icon>{{i.email}}</p>
+                    <p><fa-icon class="icon2"[icon]="faLocationDot"></fa-icon>{{i.location}}</p>
+                </div>
+                </div>
+            </div>
+            
+            <div class="column2"><br>
+                <div class="section">
+                   <h6> Applied Jobs (0{{appliedJobs.length}})</h6>
+                </div>    
+                <hr>
+                <div class="section">
+                    <h6> Profile</h6>
+                 </div>    
+                 <hr>
+                 <div class="section">
+                    <h6>Documents</h6>
+                 </div>    
+            </div>
+            <div class="column3"><br>
+                <div class="missing">
+                   <h6> Missing details</h6>
+                   <p>We are still missing some details about {{candidateData[0].first_name}} {{candidateData[0].last_name}}. would you like to initiate a chatbot to collect the missing data?</p>
+                   <button class="chatbotbtn"type="button">Initiate Chatbot</button>
+                </div>      
+            </div>
+        </div>
+        <div class="col-5 column">
+            ssffsfsdfsfd
+        </div>
+        <div class="col-3 column">
+            sdfsdfsdfsdf
+        </div>
+    </div>
+</div>
