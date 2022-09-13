@@ -23,6 +23,7 @@ export class AssessmentsComponent implements OnInit {
   minutes:any;
   link='https://www.youtube.com/embed/ly36kn0ug4k';
   intervwStage='';
+  active3=''
   constructor(private apicall: ApicallsService) { }
 
   ngOnInit(): void {
@@ -52,5 +53,7 @@ console.log(this.link);
 
 stage(stage_name:any){
 this.intervwStage=stage_name;
+this.active3='active3'
+
 }
 }

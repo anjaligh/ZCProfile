@@ -1,4 +1,7 @@
-  <h6>APPLIED JOBS (0{{appliedJobs.length}})</h6>
+<div class="row justify-content-center">
+  <div class="col-lg-9 col-md-10 col-sm-10">
+    <div class="middle-column1">
+    <h6>APPLIED JOBS (0{{appliedJobs.length}})</h6>
   <h5>Lead Front End Developer - Bangalore</h5>
     <nav class="navbar navbar-expand-lg navbar-light cust-nav" style="display:flex;">
         <!-- <a class="navbar-brand" href="#">Navbar</a> -->
@@ -24,3 +27,46 @@
         </div>
       </nav>
 <router-outlet></router-outlet>
+</div>
+  </div>
+  <div class="col-lg-3 col-md-10 col-sm-10 column">
+    <h6>JOB MATCH</h6>
+    <h5>{{jobMatch.percentage}}%</h5>
+    <div class="progress">
+      <div class="progress-bar" [style.width.%]="progresswidth"></div>
+    </div><br>
+    <p>{{jobMatch.conclusion}}</p>
+    <h6>CHANCE OF JOINING</h6>
+    <div [class]="chance">
+      <div class="chance-left">
+        <h5>{{joiningChance.chance}}</h5>
+        <p>{{joiningChance.exp}}</p>
+      </div>
+      <img [src]="high" *ngIf="joiningChance.chance=='High'" alt="" style="width:100px ; height:100px;">
+      <img [src]="low" *ngIf="joiningChance.chance=='Low'" alt="" style="width:100px ; height:100px;">
+    </div><br>
+    <div class="comments">
+      <div class="comments-head">
+        <h6 style="float: left;">COMMENTS (0)</h6>
+        <h4><fa-icon class="icon2" [icon]="faPlus"></fa-icon> Add comment</h4>
+      </div><br>
+      <div *ngFor="let i of comments; let ind=index">
+        <div *ngIf="ind<3" class="panel">
+          <div class="comment-name">
+            <div class="avatar"><img src="{{i.avatar}}" alt=""></div>
+            <div class="name">
+                <h6>{{i.name}}</h6>
+            </div>
+        </div><br>
+        </div>
+        <div class="comment" *ngIf="ind<3">
+          <p>{{i.comment}}</p>
+        </div>
+        <div class="time"*ngIf="ind<3" style="float: right;"><p>{{i.createdAt | date}}</p> </div><br>
+      </div>
+
+    </div>
+    
+  </div>
+</div>
+

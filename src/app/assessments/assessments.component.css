@@ -10,8 +10,7 @@
     font-size: 16px;
     color: #303546;
     padding-right: 10px;
-    padding-left: -10px;
-float: left;
+    float: left;
 }
 .heading :hover{
     cursor: pointer;
@@ -135,4 +134,20 @@ float: left;
     padding-left: 10px;
     line-height: 20px;
 
+}
+.section h6 :hover{
+    text-decoration: none;
+
+}
+.title_1{
+    color: #073faa !important;
+}
+.title_2{
+    color: #073faa !important;
+}
+.title_0{
+    color: #073faa !important;
+}
+.active3{
+    color: #073faa !important;
 }

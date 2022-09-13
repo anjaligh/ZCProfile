@@ -22,9 +22,118 @@ h5{
     color: #303546;
     float: left;
     padding: 0px;
+    margin-right: 25px;
 
 }
 .active1{
     color: #073faa !important;
     border-bottom:3px solid #073faa;
+}
+.column {
+    border: 1px solid #ebedf0;
+    border-radius: 8px;
+    margin: 30px 0px;
+    padding: 10px;
+}
+.column p{
+    font-size: 11px;
+    font-weight: 600;
+    color: #4e5a6d;
+    line-height: 16px;
+}
+.column h5{
+    color:#3a9f75;
+}
+.progress{
+    height: 5px;
+    color:#3a9f75 !important ;
+}
+.progress-bar {
+    height: 5px; 
+    background-color :#3a9f75
+}
+.middle-column1{
+    border: 1px solid #ebedf0;
+    border-radius: 8px;
+    margin: 30px 0px;
+    padding: 10px;
+}
+.High{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 8px;
+    padding: 20px;
+    background-color: #f4fff5;
+    border: 1px solid #ebedf0;
+    color:#3a9f75;
+}
+.Low{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 8px;
+    padding: 20px;
+    background-color:#fff0f0 ;
+    border: 1px solid #f2d6d1;
+    color:#eb5757;
+}
+.chance-left p{
+    font-size: 13px;
+}
+.comments-head{
+    display: inline;
+    width: 100%;
+}
+.comments-head h4{
+    float: right;
+    font-size: 12px;
+    font-weight: 600;
+    color:#073faa;
+}
+.comment-name{
+    display: flex;
+    align-items: center;
+    /* justify-content: center;  */
+    font-family: 'Montserrat';
+    margin-right: 10px;
+    width: 100%;
+    padding: 5px;
+}
+.comment-name h6{
+    line-height: 22px;
+    color: #7f8ca1;
+    font-size: 12px;
+    font-weight: 600;
+}
+
+.avatar img{
+    width:30px;
+    height: 30px;
+    background-color: #791c1c;
+    border: 1px solid #ffffff;
+    border-radius: 50%;
+    margin-right: 10px;
+}
+.panel{
+    display: flex;
+    width: 100%;
+}
+.comment{
+    font-family: 'Montserrat';
+    height: 80px;
+    margin-right: 10px;
+    border: 1px solid #e4e7eb;
+    border-radius: 8px;
+    width: 100%;
+    padding: 10px;
+    overflow: hidden;
+   text-overflow: ellipsis;
+   display: -webkit-box;
+   -webkit-line-clamp: 2; /* number of lines to show */
+           line-clamp: 2; 
+   -webkit-box-orient: vertical;
+}
+.comment p, .time p{
+    color: #7f8ca1;
 }
