@@ -8,13 +8,19 @@ import { SidebarComponent } from './sidebar/sidebar.component';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { HeaderComponent } from './header/header.component';
 import { ProfileComponent } from './profile/profile.component';
+import { MiddleSectionComponent } from './middle-section/middle-section.component';
+import { AssessmentsComponent } from './assessments/assessments.component';
+import { ChatbotComponent } from './chatbot/chatbot.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     SidebarComponent,
     HeaderComponent,
-    ProfileComponent
+    ProfileComponent,
+    MiddleSectionComponent,
+    AssessmentsComponent,
+    ChatbotComponent
   ],
   imports: [
     BrowserModule,

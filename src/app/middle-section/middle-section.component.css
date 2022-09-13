@@ -1,0 +1,30 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@800;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700&display=swap');
+h6{
+    font-size: 14px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    color: #7f8ca1;
+}
+h5{
+    font-family: 'Montserrat';
+    font-weight: 700;
+    font-size: 16px;
+    color: #303546;
+
+}
+.cust-nav{
+    border-bottom: 1px solid #ebedf0 ;
+}
+.nav-item{
+    font-family: 'Montserrat';
+    font-weight: 600;
+    font-size: 14px;
+    color: #303546;
+    float: left;
+    padding: 0px;
+
+}
+.active1{
+    color: #073faa !important;
+    border-bottom:3px solid #073faa;
+}

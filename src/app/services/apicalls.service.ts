@@ -11,5 +11,8 @@ export class ApicallsService {
   getprofile(){
     return this.http.get('https://63092014f8a20183f76ef345.mockapi.io/api/v1/profile')
   }
+  getassessments(){
+    return this.http.get('https://63092014f8a20183f76ef345.mockapi.io/api/v1/assessments')
+  }
   
 }

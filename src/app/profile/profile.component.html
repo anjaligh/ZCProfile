@@ -3,7 +3,6 @@
         <div class="col-3 " >
             <div class="column1">
                 <div  *ngFor="let i of candidateData">
-                    <br>
                     <div class="basicdata">
                         <img class="avatar1"src="{{i.avatar}}" alt="">
                     </div><br>
@@ -27,9 +26,9 @@
                 </div>
             </div>
             
-            <div class="column2"><br>
+            <div class="column2">
                 <div class="section">
-                   <h6> Applied Jobs (0{{appliedJobs.length}})</h6>
+                   <a routerLink="middle" routerLinkActive="active"><h6> Applied Jobs (0{{appliedJobs.length}})</h6></a>
                 </div>    
                 <hr>
                 <div class="section">
@@ -48,8 +47,12 @@
                 </div>      
             </div>
         </div>
-        <div class="col-5 column">
-            ssffsfsdfsfd
+        <div class="col-5">
+            <div class="middle-column1">
+                <!-- <app-middle-section></app-middle-section> -->
+                <router-outlet></router-outlet>
+            </div>
+            
         </div>
         <div class="col-3 column">
             sdfsdfsdfsdf

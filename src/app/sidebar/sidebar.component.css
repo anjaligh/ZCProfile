@@ -7,8 +7,9 @@
   width: 70px;
   text-align: center;
   background-color: #095095;
-  position: absolute;
+  position: fixed;
   top: 0px;
+  left: 0px;
   height: 100%;
 }
 .img{
