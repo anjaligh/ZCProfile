@@ -1,19 +1,76 @@
-<div class="heading">
-    <h6>sdsdf</h6>
-    <div [ngClass]="stamp">
-       <small>sdasd</small> 
+
+<div class="stages" *ngFor="let JobStage of JobStages2">
+    <div class="heading" >
+        <a (click)="stage(JobStage.stage_name)"><h6>{{JobStage.stage_name}}</h6></a>
+        <div [ngClass]="JobStage.status">
+           <small>{{JobStage.status}}</small> 
+        </div>
+        <!-- <div class="action">
+            <p>Take Action</p>
+        </div> -->
     </div>
-    <!-- <div class="action">
-        <p>Take Action</p>
-    </div> -->
-</div><br>
-<div class="technical">
-    <div class="venue">
-        <p id="venue">Venue</p>
-        <p id="meet">Google meet <fa-icon [icon]="faLink"></fa-icon> </p>
+    <div class="technical" *ngIf="intervwStage=='Technical Interview' && JobStage.stage_name=='Technical Interview'"><br>
+        <div class="venue">
+            <p id="venue">Venue</p>
+            <p id="meet">Google meet <fa-icon [icon]="faLink"></fa-icon> </p>
+        </div>
+        <div class="slot"style="padding-right: 40px;">
+            <p id="venue">Time</p>
+            <p id="meet" style="padding-top: 8px;">{{hours}}.{{minutes}}, {{JobStage.time | date}}</p>
+        </div>
     </div>
-    <div class="slot">
-        <p id="venue">Time slot</p>
-        <p id="meet">Google meet</p>
+    <div class="technical" *ngIf="intervwStage=='Technical Interview' && JobStage.stage_name=='Technical Interview'"><br>
+        <p id="venue" style="font-weight: 700;">Interviewers</p>
+        <div class="panel">
+            <div class="interviewers" *ngFor="let i of JobStage.interview_panel">
+                <div class="avatar"><img src="{{i.avatar}}" alt=""></div>
+                <div class="name">
+                    <h6>{{i.firstName}} {{i.lastName}}</h6>
+                </div>
+        </div>
     </div>
+    
+    </div>
+    <div class="technical" *ngIf="JobStage.status=='Scheduled' && intervwStage=='Face to Face Interview'"><br>
+        <div class="venue">
+            <p id="venue">Venue</p>
+            <!-- <p id="meet" *ngIf="intervwStage=='Technical Interview'">Google meet <fa-icon [icon]="faLink"></fa-icon> </p> -->
+            <p id="meet" *ngIf="intervwStage=='Face to Face Interview'">{{JobStage.venue}}</p>
+        </div>
+        <div class="slot"style="padding-right: 40px;">
+            <p id="venue">Time</p>
+            <p id="meet" style="padding-top: 8px;">{{hours}}.{{minutes}}, {{JobStage.time | date}}</p>
+        </div>
+    </div>
+    <div class="technical" *ngIf="JobStage.status=='Scheduled' && intervwStage=='Face to Face Interview'"><br>
+        <p id="venue" style="font-weight: 700;">Interviewers</p>
+        <div class="panel">
+            <div class="interviewers" *ngFor="let i of JobStage.interview_panel">
+                <div class="avatar"><img src="{{i.avatar}}" alt=""></div>
+                <div class="name">
+                    <h6>{{i.firstName}} {{i.lastName}}</h6>
+                </div>
+        </div>
+    </div>
+    
+    </div>
+    <div class="technical" *ngIf="JobStage.stage_name=='Robotic Interview' && intervwStage=='Robotic Interview'">
+        <p id="venue" style="font-weight: 700;">Questions and responses</p>
+        <div class="panel">
+            <br>
+            <div class="column2">
+                <div class="section" *ngFor="let i of JobStage.questions">
+                   <a (click)="videolink(i.a)" routerLink="middle" routerLinkActive="active"><h6> {{i.q}}</h6></a>
+                   <!-- <small>58s</small> -->
+                   <hr>
+                </div>        
+            </div>
+            <!-- <iframe width="560" height="315" src="https://www.youtube.com/embed/ly36kn0ug4k" title="YouTube video player"  allowfullscreen></iframe> -->
+            <iframe width="320" height="220" src="https://www.youtube.com/watch?v=8-Fe0kVv3WI" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        </div>
+        
+
+    </div>
+    <hr>
 </div>
+
