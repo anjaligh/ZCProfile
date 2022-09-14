@@ -11,6 +11,7 @@ import { ProfileComponent } from './profile/profile.component';
 import { MiddleSectionComponent } from './middle-section/middle-section.component';
 import { AssessmentsComponent } from './assessments/assessments.component';
 import { ChatbotComponent } from './chatbot/chatbot.component';
+import { SideProfileComponent } from './side-profile/side-profile.component';
 
 @NgModule({
   declarations: [
@@ -20,7 +21,8 @@ import { ChatbotComponent } from './chatbot/chatbot.component';
     ProfileComponent,
     MiddleSectionComponent,
     AssessmentsComponent,
-    ChatbotComponent
+    ChatbotComponent,
+    SideProfileComponent
   ],
   imports: [
     BrowserModule,

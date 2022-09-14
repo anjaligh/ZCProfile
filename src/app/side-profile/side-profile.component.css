@@ -1,0 +1,91 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700&display=swap');
+.middle-column1{
+    border: 1px solid #ebedf0;
+    border-radius: 8px;
+    margin: 30px 0px 0px 0px;
+    padding: 0px;
+display: block;
+}
+.column {
+    border: 1px solid #ebedf0;
+    border-radius: 8px;
+    margin: 30px 0px;
+    padding: 10px;
+}
+.headline{
+    display: inline-block;
+    line-height: 0px;
+    width: 100%;
+    padding: 10px 10px 0px 10px;
+}
+#head-left{
+    float: left;
+    font-family: 'Montserrat';
+    font-weight: 700;
+    font-size: 16px;
+    color: #303546;
+}
+#head-right{
+    float:right;
+    font-family: 'Montserrat';
+    font-weight: 600;
+    font-size: 14px;
+    color: #145f9f;
+}
+fa-icon{
+    color: #d4d4d4;
+    padding: 0px 10px;
+}
+#exp-head{
+    color: #7f8ca1;
+    font-size: 13px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-weight: 600;
+    line-height: 0px;
+    padding: 0px 10px 0px 10px;
+}
+.experience{
+    display: flex;
+    padding: 10px;
+}
+.experience-details{
+    width: 100%;
+    padding-left: 20px;
+    margin: 0px;
+    /* border-bottom: 1px solid #ebedf0; */
+    line-height: 10px;
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    
+}
+.experience-details h5{
+    font-weight: 700;
+    font-size: 16px;
+    color: #303546;
+}
+.experience-details h6{
+    font-weight: 500;
+    font-size: 15px;
+    color: #000000;
+}
+.experience-details p{
+    font-weight: 500;
+    font-size: 15px;
+    color: #7f8ca1;
+}
+.percentage{
+    width: 50px;
+    height: 50px;
+    background-color: #daedff;
+    color:#145f9f ;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.block-right{
+    display: block;
+    align-items: center;
+    justify-content: center;
+}
+.block-right small{
+    color:#7f8ca1 ;
+}

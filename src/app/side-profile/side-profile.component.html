@@ -1,0 +1,50 @@
+<div class="row justify-content-center">
+  <div class="col-lg-9 col-md-10 col-sm-10">
+    <div class="middle-column1">
+      <div class="headline">
+        <h5 id="head-left">Work experience</h5>
+        <p id="head-right">View Resume <a href="">
+            <fa-icon [icon]="faPen"></fa-icon>
+          </a></p>
+      </div>
+      <p id="exp-head">8 years of relevant experience</p><br>
+        <div class="experience" *ngFor="let i of experience; let ind=index">
+          <img src="{{i.logo}}" width="75px" height="75px" style="background-color: blue;" alt="">
+          <div class="experience-details">
+            <h5>{{i.designation}}</h5>
+            <h6>{{i.company}}</h6>
+            <p>{{i.from |date}} to {{i.to |date}}</p>
+            <p>{{i.location}}</p>
+            <hr *ngIf="ind<explength-1">
+          </div>
+          
+        </div>
+    </div>
+    <div class="middle-column1" style="margin:0px;">
+      <div class="headline">
+        <h5 id="head-left">Education</h5>
+      </div>
+      <br><br>
+        <div class="experience" *ngFor="let i of experience; let ind=index">
+          <img src="{{i.logo}}" width="75px" height="75px" style="background-color: blue;" alt="">
+          <div class="experience-details" style="width: 70%;">
+            <h5>{{i.designation}}</h5>
+            <h6>{{i.company}}</h6>
+            <p>{{i.from |date}} to {{i.to |date}}</p>
+            <p>{{i.location}}</p>
+            <hr *ngIf="ind<explength-1">
+          </div>
+          <div class="block-right">
+            <div class="percentage">fgg</div>
+            <small>percentage</small>
+          </div>
+          
+          
+        </div>
+    </div>
+  </div>
+  <div class="col-lg-3 col-md-10 col-sm-10 column">
+    <h6>JOB MATCH</h6>
+
+  </div>
+</div>

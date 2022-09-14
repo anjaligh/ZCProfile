@@ -26,7 +26,8 @@ exp:'Quick Response & Enthusiastic'
   }
   chance=this.joiningChance.chance;
   high='assets/high.png';
-  low='assets/low.png';
+  low='assets/low.jpg';
+  commentInd=3;
   progresswidth=this.jobMatch.percentage;
   constructor(private apicall:ApicallsService) { }
 

@@ -1,3 +1,4 @@
+import { expModel } from "./expModel";
 export class candidateModel{
     constructor(
     public first_name : String,
@@ -5,8 +6,8 @@ export class candidateModel{
     public avatar:String,  
     public phone_number : String,
     public email: String,
-    public location : String
-    // public experience: Array,
+    public location : String,
+    public experience: expModel[]
     // public education : Array,
     // public documents:Array,
     // public recommended_jobs: Array
