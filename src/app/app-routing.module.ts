@@ -2,6 +2,7 @@ import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { AssessmentsComponent } from './assessments/assessments.component';
 import { ChatbotComponent } from './chatbot/chatbot.component';
+import { DocumentsComponent } from './documents/documents.component';
 import { MiddleSectionComponent } from './middle-section/middle-section.component';
 import { ProfileComponent } from './profile/profile.component';
 import { SideProfileComponent } from './side-profile/side-profile.component';
@@ -12,7 +13,8 @@ const routes: Routes = [
     {path:'assessments', component:AssessmentsComponent},
     {path:'chatbot', component:ChatbotComponent}
   ]},
-  {path:'sideprofile',component:SideProfileComponent}
+  {path:'sideprofile',component:SideProfileComponent},
+  {path:'documents',component:DocumentsComponent}
   
   
   

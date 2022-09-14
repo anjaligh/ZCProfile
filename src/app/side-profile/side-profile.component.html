@@ -9,7 +9,7 @@
       </div>
       <p id="exp-head">8 years of relevant experience</p><br>
         <div class="experience" *ngFor="let i of experience; let ind=index">
-          <img src="{{i.logo}}" width="75px" height="75px" style="background-color: blue;" alt="">
+          <img src="{{i.logo}}" width="75px" height="75px" alt="">
           <div class="experience-details">
             <h5>{{i.designation}}</h5>
             <h6>{{i.company}}</h6>
@@ -25,17 +25,17 @@
         <h5 id="head-left">Education</h5>
       </div>
       <br><br>
-        <div class="experience" *ngFor="let i of experience; let ind=index">
-          <img src="{{i.logo}}" width="75px" height="75px" style="background-color: blue;" alt="">
+        <div class="experience" *ngFor="let i of education; let ind=index">
+          <img src="{{i.logo}}" width="75px" height="75px" alt="">
           <div class="experience-details" style="width: 70%;">
-            <h5>{{i.designation}}</h5>
-            <h6>{{i.company}}</h6>
+            <h5>{{i.college}}</h5>
+            <h6>{{i.course}}</h6>
             <p>{{i.from |date}} to {{i.to |date}}</p>
             <p>{{i.location}}</p>
             <hr *ngIf="ind<explength-1">
           </div>
           <div class="block-right">
-            <div class="percentage">fgg</div>
+            <div class="percentage">{{marks[ind]}}</div>
             <small>percentage</small>
           </div>
           
@@ -44,7 +44,19 @@
     </div>
   </div>
   <div class="col-lg-3 col-md-10 col-sm-10 column">
-    <h6>JOB MATCH</h6>
+    <h6>RECOMMENDED JOBS (0{{recommendedJobsLength}})</h6><br>
+    <div class="recom-jobs" *ngFor="let i of recommended_jobs; let ind=index">
+      <p id="job">{{i.job_name}}</p>
+      <p id="match">{{jobMatch[ind]}}% match</p>
+    </div>
+    <hr>
 
+    <h6>JOBS HISTORY (0{{jobsHistoryLength}})</h6><br>
+    <div class="recom-jobs" *ngFor="let i of jobsHistory; let ind=index">
+      <p id="job">{{i.job_name}}</p>
+      <p id="match" *ngIf="i.status=='In Progress'">{{i.status}}</p>
+      <p id="matchRej" *ngIf="i.status=='Rejected'">{{i.status}}</p>
+    </div>
+    <hr>
   </div>
 </div>

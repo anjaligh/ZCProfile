@@ -1,4 +1,6 @@
 import { expModel } from "./expModel";
+import { recommendedJobsModel } from "./recommendedJobsModel";
+import { jobsHistoryModel } from "./jobsHistoryModel";
 export class candidateModel{
     constructor(
     public first_name : String,
@@ -7,10 +9,8 @@ export class candidateModel{
     public phone_number : String,
     public email: String,
     public location : String,
-    public experience: expModel[]
-    // public education : Array,
-    // public documents:Array,
-    // public recommended_jobs: Array
-    // public comments :Object
+    public experience: expModel[],
+    public recommended_jobs:recommendedJobsModel[],
+    public previous_jobs_applied:jobsHistoryModel[]
     ){}
 }

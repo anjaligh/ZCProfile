@@ -3,6 +3,9 @@ import { faPen} from '@fortawesome/free-solid-svg-icons';
 import { candidateModel } from '../services/candidateModel';
 import { ApicallsService } from '../services/apicalls.service';
 import { expModel } from '../services/expModel';
+import { educationModel } from '../services/educationModel';
+import { recommendedJobsModel } from '../services/recommendedJobsModel';
+import { jobsHistoryModel } from '../services/jobsHistoryModel';
 
 @Component({
   selector: 'app-side-profile',
@@ -14,7 +17,15 @@ export class SideProfileComponent implements OnInit {
   candidateData:candidateModel[]=[];
   Data:[]=[];
   experience:expModel[]=[];
+  education:educationModel[]=[];
+  recommended_jobs:recommendedJobsModel[]=[];
+  jobsHistory:jobsHistoryModel[]=[];
   explength:any;
+  recommendedJobsLength:any;
+  jobsHistoryLength:any;
+  marks=[75,82,87];
+  jobMatch=[85,78,89,84,79];
+  match='match';
   constructor(private apicall:ApicallsService) { }
 
   ngOnInit(): void {
@@ -24,6 +35,11 @@ export class SideProfileComponent implements OnInit {
       console.log("this.candidateData")
       console.log(this.candidateData)
       this.experience=JSON.parse(JSON.stringify(this.candidateData[0])).experience;
+      this.education=JSON.parse(JSON.stringify(this.candidateData[0])).education;
+      this.recommended_jobs=JSON.parse(JSON.stringify(this.candidateData[0])).recommended_jobs;
+      this.recommendedJobsLength=this.recommended_jobs.length;
+      this.jobsHistory=JSON.parse(JSON.stringify(this.candidateData[0])).previous_jobs_applied;
+      this.jobsHistoryLength=this.jobsHistory.length;
       console.log("experience");
       console.log(this.experience[0].company);
       this.explength=this.experience.length

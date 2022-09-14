@@ -12,6 +12,12 @@ display: block;
     margin: 30px 0px;
     padding: 10px;
 }
+h6{
+    font-size: 13px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    color: #7f8ca1;
+    font-weight: 500;
+}
 .headline{
     display: inline-block;
     line-height: 0px;
@@ -80,6 +86,7 @@ fa-icon{
     display: flex;
     align-items: center;
     justify-content: center;
+    font-weight: 600;
 }
 .block-right{
     display: block;
@@ -88,4 +95,27 @@ fa-icon{
 }
 .block-right small{
     color:#7f8ca1 ;
+}
+#job{
+    font-family:'Montserrat';
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 10px;
+    color: #303546;
+}
+#match{
+    font-family:'Montserrat';
+    font-weight: 600;
+    font-size: 13px;
+    line-height: 8px;
+    color: #3a9f75;
+    padding-bottom: 15px;
+}
+#matchRej{
+    font-family:'Montserrat';
+    font-weight: 600;
+    font-size: 13px;
+    line-height: 8px;
+    color: #eb5757;
+    padding-bottom: 15px;
 }
