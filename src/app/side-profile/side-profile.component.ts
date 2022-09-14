@@ -33,8 +33,8 @@ export class SideProfileComponent implements OnInit {
     lastname:'',
     phone:'',
     mailid:'',
-    gender:'',
-    exper:'',
+    gender:'Male',
+    exper:'2',
     address:''
 
   }
@@ -45,7 +45,12 @@ export class SideProfileComponent implements OnInit {
       this.Data=JSON.parse(JSON.stringify(data))
       this.candidateData=JSON.parse(JSON.stringify(this.Data))
       console.log("this.candidateData")
-      console.log(this.candidateData)
+      console.log(this.candidateData[0].first_name)
+      this.updateform.firstname=this.candidateData[0].first_name;
+      this.updateform.lastname=this.candidateData[0].last_name;
+      this.updateform.mailid=this.candidateData[0].email;
+      this.updateform.phone=this.candidateData[0].phone_number;
+      this.updateform.address=this.candidateData[0].location;
       this.experience=JSON.parse(JSON.stringify(this.candidateData[0])).experience;
       this.education=JSON.parse(JSON.stringify(this.candidateData[0])).education;
       this.recommended_jobs=JSON.parse(JSON.stringify(this.candidateData[0])).recommended_jobs;
@@ -66,6 +71,6 @@ export class SideProfileComponent implements OnInit {
     localStorage.setItem('mailid',this.updateform.mailid);
     localStorage.setItem('gender',this.updateform.gender);
     localStorage.setItem('address',this.updateform.address);
-    alert('added');
+    alert('Profile edited successfully');
   }
 }

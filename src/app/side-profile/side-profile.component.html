@@ -76,52 +76,63 @@
 <div class="row">
   <div class="col-6">
       <label for="firstname">First Name</label><br>
-      <input type="text" id="firstname" name="firstname" placeholder="Enter here" #firstname="ngModel" [(ngModel)]="updateform.firstname" pattern="^[a-zA-Z ]{4,32}"><br>
-      <small style="color: red;" *ngIf="firstname.touched && firstname.invalid">Invalid title!</small>
+      <input type="text" id="firstname" name="firstname" placeholder="Enter here" #firstname="ngModel" [(ngModel)]="updateform.firstname" pattern="^[a-zA-Z ]{2,32}"><br>
+      <small style="color: red;" *ngIf="firstname.touched && firstname.invalid">Only letters and spaces allowed!</small>
                 <small style="color: green;" *ngIf="firstname.touched && firstname.valid">Valid!</small>
   </div>
   <div class="col-6">
     <label for="lastname">Last Name</label><br>
-    <input type="text" id="lastname" name="lastname"placeholder="Enter here" [(ngModel)]="updateform.lastname" #lastname="ngModel" pattern="^[a-zA-Z ]{4,32}"><br>
-    <small style="color: red;" *ngIf="lastname.touched && lastname.invalid">Invalid title!</small>
+    <input type="text" id="lastname" name="lastname"placeholder="Enter here" [(ngModel)]="updateform.lastname" #lastname="ngModel" pattern="^[a-zA-Z ]{2,32}"><br>
+    <small style="color: red;" *ngIf="lastname.touched && lastname.invalid">Only letters and spaces allowed!</small>
                 <small style="color: green;" *ngIf="lastname.touched && lastname.valid">Valid!</small>
   </div>
 </div><br>
 <div class="row">
   <div class="col-6">
       <label for="phone">Phone</label><br>
-      <input type="text" id="phone" name="phone" placeholder="Enter here" [(ngModel)]="updateform.phone" #phone="ngModel">    <br>
-  </div>
+      <input type="text" id="phone" name="phone" placeholder="Enter here" [(ngModel)]="updateform.phone" #phone="ngModel" pattern="^[0-9]{10}" required>    <br>
+      <small style="color: red;" *ngIf="phone.invalid">Enter a 10 digit Phone number!</small>
+      <small style="color: green;" *ngIf="phone.valid">Valid!</small>
+
+    </div>
   <div class="col-6">
     <label for="mailid">Email</label><br>
-    <input type="email" id="mailid" name="mailid" placeholder="Enter here" [(ngModel)]="updateform.mailid" #mailid="ngModel"><br>
-    
+    <input type="email" id="mailid" name="mailid" placeholder="Enter here" [(ngModel)]="updateform.mailid" #mailid="ngModel" pattern="^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*" required><br>
+    <small style="color: red;" *ngIf="mailid.touched && mailid.invalid">Invalid mail id!</small>
+                <small style="color: green;" *ngIf="mailid.touched && mailid.valid">Valid!</small>
   </div>
 </div><br>
 <div class="row">
   <div class="col-6">
     <label for="gender" style="padding-right: 40px;" >Gender</label><br>
-    <select id="gender"name="gender" [(ngModel)]="updateform.gender" #gender="ngModel">
+    <select id="gender"name="gender" [(ngModel)]="updateform.gender" #gender="ngModel" required>
         <option value="Male">Male</option>
         <option value="Female">Female</option>
         <option value="Other">Other</option>
-    </select><br><br> 
+    </select><br>
+    <small style="color: red;" *ngIf="gender.touched && gender.invalid">Please fill out this field!</small>
+                <small style="color: green;" *ngIf="gender.touched && gender.valid">Valid!</small>
+  
   </div>
   <div class="col-6">
     <label for="exper">Years of experience</label><br>
-    <input type="text" id="exper" name="exper"placeholder="Enter here" [(ngModel)]="updateform.exper" #exper="ngModel"><br>
-    
+    <input type="number" id="exper" name="exper"placeholder="Enter here" [(ngModel)]="updateform.exper" #exper="ngModel" required><br>
+    <small style="color: red;" *ngIf="exper.touched && exper.invalid">Invalid value!</small>
+                <small style="color: green;" *ngIf="exper.touched && exper.valid">Valid!</small>
+  
   </div>
 </div><br>
 <div class="row address">
     <label for="address">Address</label><br>
-    <textarea type="text" id="address" name="address"placeholder="Enter here" [(ngModel)]="updateform.address" #address="ngModel"></textarea><br>
-    
+    <textarea type="text" id="address" name="address"placeholder="Enter here" [(ngModel)]="updateform.address" #address="ngModel" required></textarea><br>
+    <small style="color: red;" *ngIf="address.touched && address.invalid">Invalid address!</small>
+                <small style="color: green;" *ngIf="address.touched && address.valid">Valid!</small>
+  
 </div>
 
 
   <!-- Sign up button -->
-  <button class="btn btn-info my-4 update-btn" type="submit">Update</button>
+  <button class="btn btn-info my-4 update-btn" [disabled]="firstname.invalid || lastname.invalid || mailid.invalid || address.invalid || phone.invalid || exper.invalid || gender.invalid " type="submit">Update</button>
 </form>
     </div>
   </div>

@@ -37,8 +37,6 @@ export class AssessmentsComponent implements OnInit {
       console.log('jobstages');
       console.log(JSON.parse(JSON.stringify(this.Data2)).job_stages);
       this.JobStages2 = JSON.parse(JSON.stringify(this.Data2)).job_stages;
-      this.hours=this.intervwdate.getHours();
-      this.minutes=this.intervwdate.getMinutes();
 
       this.Data3=JSON.parse(JSON.stringify(this.JobStages2));
       console.log("DAta3");

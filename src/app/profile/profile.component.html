@@ -28,11 +28,11 @@
             
             <div class="column2">
                 <div class="section">
-                   <a class="inactive" routerLink="middle/assessments" routerLinkActive="active">Applied Jobs (0{{appliedJobs.length}})</a>
+                   <a routerLink="middle" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: false }">Applied Jobs (0{{appliedJobs.length}})</a>
                 </div>    
                 <hr>
                 <div class="section">
-                    <a routerLink="sideprofile" routerLinkActive="active">Profile</a>
+                    <a  routerLink="sideprofile" routerLinkActive="active">Profile</a>
                  </div>    
                  <hr>
                  <div class="section">

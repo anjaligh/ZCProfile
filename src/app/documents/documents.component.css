@@ -53,12 +53,13 @@ fa-icon{
     background-color: #fcfcfc;
     border: 1px solid #f9f1d0;
     border-radius: 8px;
-    margin: 10px 0px;
+    margin: 10px 0px 300px 0px;
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
 .missing{
     padding:0px 20px;
     text-align: justify;
+    
 }
 
 .missing h6 {

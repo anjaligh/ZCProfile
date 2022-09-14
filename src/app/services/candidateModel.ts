@@ -3,12 +3,12 @@ import { recommendedJobsModel } from "./recommendedJobsModel";
 import { jobsHistoryModel } from "./jobsHistoryModel";
 export class candidateModel{
     constructor(
-    public first_name : String,
-    public last_name:String,  
-    public avatar:String,  
-    public phone_number : String,
-    public email: String,
-    public location : String,
+    public first_name : string,
+    public last_name:string,  
+    public avatar:string,  
+    public phone_number : string,
+    public email: string,
+    public location : string,
     public experience: expModel[],
     public recommended_jobs:recommendedJobsModel[],
     public previous_jobs_applied:jobsHistoryModel[]
