@@ -1,0 +1,110 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700&display=swap');
+.middle-column1{
+    border: 1px solid #ebedf0;
+    border-radius: 8px;
+    margin: 30px 0px 0px 0px;
+    padding: 0px;
+display: block;
+}
+.column {
+    /* border: 1px solid #ebedf0; */
+    border-radius: 8px;
+    margin: 30px 0px;
+    padding: 10px;
+}
+h6{
+    font-size: 13px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    color: #7f8ca1;
+    font-weight: 500;
+}
+.headline{
+    display: inline-block;
+    line-height: 0px;
+    width: 100%;
+    padding: 10px 10px 0px 10px;
+}
+#head-left{
+    float: left;
+    font-family: 'Montserrat';
+    font-weight: 700;
+    font-size: 16px;
+    color: #303546;
+}
+#head-right{
+    float:right;
+    font-family: 'Montserrat';
+    font-weight: 600;
+    font-size: 14px;
+    color: #145f9f;
+}
+fa-icon{
+    color: #d4d4d4;
+    padding: 0px 10px;
+}
+.outer{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.column3 {
+    width: 90%;
+    padding-left: 20px;
+    background-color: #fcfcfc;
+    border: 1px solid #f9f1d0;
+    border-radius: 8px;
+    margin: 10px 0px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+.missing{
+    padding:0px 20px;
+    text-align: justify;
+}
+
+.missing h6 {
+    font-size: 13px;
+    font-weight: 600;
+    color: #303546;
+    line-height: 20px;
+}
+
+.missing p {
+    font-size: 12px;
+    font-weight: 500;
+    color: #4e5a6d;
+    line-height: 20px;
+}
+
+.chatbotbtn {
+    font-size: 13px;
+    font-weight: 600;
+    background-color: #daedff;
+    color: #095095;
+    border: 1px solid #daedff;
+    border-radius: 8px;
+    padding: 5px;
+    line-height: 16px
+}
+#job{
+    font-family:'Montserrat';
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 10px;
+    color: #303546;
+}
+#match{
+    font-family:'Montserrat';
+    font-weight: 600;
+    font-size: 13px;
+    line-height: 8px;
+    color: #3a9f75;
+    padding-bottom: 15px;
+}
+#matchRej{
+    font-family:'Montserrat';
+    font-weight: 600;
+    font-size: 13px;
+    line-height: 8px;
+    color: #eb5757;
+    padding-bottom: 15px;
+}

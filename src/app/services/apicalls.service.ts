@@ -17,4 +17,8 @@ export class ApicallsService {
   getComments(){
     return this.http.get('https://63092014f8a20183f76ef345.mockapi.io/api/v1/comments')
   }
+  getChatbotResponse(){
+    return this.http.get('https://63092014f8a20183f76ef345.mockapi.io/api/v1/chatbot_response')
+  }
+  
 }

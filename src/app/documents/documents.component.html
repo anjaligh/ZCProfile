@@ -1,1 +1,38 @@
-<p>documents works!</p>
+<div class="row justify-content-center">
+    <div class="col-lg-9 col-md-10 col-sm-10">
+      <div class="middle-column1">
+        <div class="headline">
+          <h5 id="head-left">Documents</h5>
+          <p id="head-right">View Resume <a href="">
+              <fa-icon [icon]="faPen"></fa-icon>
+            </a></p>
+        </div>
+        <div class="outer">
+            <div class="column3"><br>
+                <div class="missing">
+                   <h6> Missing details</h6>
+                   <p>We are still missing some details about {{candidateData[0].first_name}} {{candidateData[0].last_name}}. would you like to initiate a chatbot to collect the missing data?</p>
+                   <button class="chatbotbtn"type="button">Initiate Chatbot</button><br><br>
+                </div>      
+            </div>
+        </div>
+         
+      </div>
+    </div>
+    <div class="col-lg-3 col-md-10 col-sm-10 column">
+      <h6>RECOMMENDED JOBS (0{{recommendedJobsLength}})</h6><br>
+      <div class="recom-jobs" *ngFor="let i of recommended_jobs; let ind=index">
+        <p id="job">{{i.job_name}}</p>
+        <p id="match">{{jobMatch[ind]}}% match</p>
+      </div>
+      <hr>
+  
+      <h6>JOBS HISTORY (0{{jobsHistoryLength}})</h6><br>
+      <div class="recom-jobs" *ngFor="let i of jobsHistory; let ind=index">
+        <p id="job">{{i.job_name}}</p>
+        <p id="match" *ngIf="i.status=='In Progress'">{{i.status}}</p>
+        <p id="matchRej" *ngIf="i.status=='Rejected'">{{i.status}}</p>
+      </div>
+      <hr>
+    </div>
+  </div>

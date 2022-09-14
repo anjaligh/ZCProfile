@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { ApicallsService } from '../services/apicalls.service';
+import { chatbotModel } from '../services/chatbotModel';
 
 @Component({
   selector: 'app-chatbot',
@@ -6,10 +8,13 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./chatbot.component.css']
 })
 export class ChatbotComponent implements OnInit {
-
-  constructor() { }
+chatbotData:chatbotModel[]=[];
+  constructor(public apicall:ApicallsService) { }
 
   ngOnInit(): void {
+    this.apicall.getChatbotResponse().subscribe(data=>{
+      this.chatbotData=JSON.parse(JSON.stringify(data));
+    })
   }
 
 }

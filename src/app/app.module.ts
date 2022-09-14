@@ -13,6 +13,8 @@ import { AssessmentsComponent } from './assessments/assessments.component';
 import { ChatbotComponent } from './chatbot/chatbot.component';
 import { SideProfileComponent } from './side-profile/side-profile.component';
 import { DocumentsComponent } from './documents/documents.component';
+import { FeedbackComponent } from './feedback/feedback.component';
+import { RemindersComponent } from './reminders/reminders.component';
 
 @NgModule({
   declarations: [
@@ -24,7 +26,9 @@ import { DocumentsComponent } from './documents/documents.component';
     AssessmentsComponent,
     ChatbotComponent,
     SideProfileComponent,
-    DocumentsComponent
+    DocumentsComponent,
+    FeedbackComponent,
+    RemindersComponent
   ],
   imports: [
     BrowserModule,

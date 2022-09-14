@@ -1,6 +1,6 @@
 <div class="container1" >
     <div class="row justify-content-center">
-        <div class="col-lg-2 col-md-10 col-sm-10" >
+        <div class="col-lg-2 col-md-11 col-sm-10" >
             <div class="column1">
                 <div  *ngFor="let i of candidateData">
                     <div class="basicdata">
@@ -20,7 +20,7 @@
                 <hr>
                 <div class="contact-details">
                     <p><fa-icon class="icon2" [icon]="faPhone"></fa-icon> +91 {{i.phone_number}}</p>
-                    <p><fa-icon class="icon2"[icon]="faEnvelope"></fa-icon>{{i.email}}</p>
+                    <p><fa-icon class="icon2"[icon]="faEnvelope"></fa-icon>{{i.email.toLowerCase()}}</p>
                     <p><fa-icon class="icon2"[icon]="faLocationDot"></fa-icon>{{i.location}}</p>
                 </div>
                 </div>
@@ -28,15 +28,15 @@
             
             <div class="column2">
                 <div class="section">
-                   <a routerLink="middle/assessments" routerLinkActive="active"><h6> Applied Jobs (0{{appliedJobs.length}})</h6></a>
+                   <a class="inactive" routerLink="middle/assessments" routerLinkActive="active">Applied Jobs (0{{appliedJobs.length}})</a>
                 </div>    
                 <hr>
                 <div class="section">
-                    <a routerLink="sideprofile" routerLinkActive="active"><h6> Profile</h6></a>
+                    <a routerLink="sideprofile" routerLinkActive="active">Profile</a>
                  </div>    
                  <hr>
                  <div class="section">
-                    <a routerLink="documents" routerLinkActive="active"><h6>Documents</h6></a>
+                    <a routerLink="documents" routerLinkActive="active">Documents</a>
                  </div>    
             </div>
             <div class="column3"><br>
@@ -47,7 +47,7 @@
                 </div>      
             </div>
         </div>
-        <div class="col-lg-9 col-md-10 col-sm-10">
+        <div class="col-lg-9 col-md-11 col-sm-10">
             <!-- <div class="middle-column1"> -->
                 <!-- <app-middle-section></app-middle-section> -->
                 <router-outlet></router-outlet>

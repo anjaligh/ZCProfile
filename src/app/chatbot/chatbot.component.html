@@ -1,1 +1,17 @@
-<p>chatbot works!</p>
+<div class="chatbot">
+    <div class="headline">
+        <h5 id="head-left">Job Application Bot</h5>
+        <p id="head-right">Completed by 2.00pm, 21st Jan 2021</p><br><br>
+        <div class="box" *ngFor="let chat of chatbotData; let i=index">
+            <div class="textbox left" *ngIf="i<5">
+            <p>Question {{i+1}}. {{chat.question}}</p>
+            </div>
+            <div class="textbox right" *ngIf="i<5">
+                <p>Answer {{i+1}}. {{chat.answer}}</p>
+            </div>
+            </div>
+    </div><br>
+    
+    
+</div>
+
