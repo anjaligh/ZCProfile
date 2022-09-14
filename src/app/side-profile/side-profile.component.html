@@ -3,7 +3,7 @@
     <div class="middle-column1">
       <div class="headline">
         <h5 id="head-left">Work experience</h5>
-        <p id="head-right">View Resume <a title="Edit Profile" data-toggle="modal" data-target="#modalLoginForm"><fa-icon [icon]="faPen"></fa-icon></a></p>
+        <p id="head-right">View Resume <a title="Edit Profile" data-toggle="modal" data-target="#modalUpdateForm"><fa-icon [icon]="faPen"></fa-icon></a></p>
       </div>
       <p id="exp-head">8 years of relevant experience</p><br>
         <div class="experience" *ngFor="let i of experience; let ind=index">
@@ -61,7 +61,7 @@
 
 <!-- EDIT PROFILE -->
 
-<div class="modal fade" id="modalLoginForm" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
+<div class="modal fade" id="modalUpdateForm" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
   aria-hidden="true">
   <div class="modal-dialog modal-lg" role="document">
     <div class="modal-content">
@@ -72,74 +72,57 @@
         </button>
       </div>
       <!-- Default form register -->
-<form class="text-left border border-light p-4">
+<form class="text-left border border-light p-4" (ngSubmit)="updateProfile()">
 <div class="row">
   <div class="col-6">
       <label for="firstname">First Name</label><br>
-      <input type="text" id="firstname" name="firstname" placeholder="Enter here">    <br>
+      <input type="text" id="firstname" name="firstname" placeholder="Enter here" #firstname="ngModel" [(ngModel)]="updateform.firstname" pattern="^[a-zA-Z ]{4,32}"><br>
+      <small style="color: red;" *ngIf="firstname.touched && firstname.invalid">Invalid title!</small>
+                <small style="color: green;" *ngIf="firstname.touched && firstname.valid">Valid!</small>
   </div>
   <div class="col-6">
     <label for="lastname">Last Name</label><br>
-    <input type="text" id="lastname" name="lastname"placeholder="Enter here"><br>
-    
+    <input type="text" id="lastname" name="lastname"placeholder="Enter here" [(ngModel)]="updateform.lastname" #lastname="ngModel" pattern="^[a-zA-Z ]{4,32}"><br>
+    <small style="color: red;" *ngIf="lastname.touched && lastname.invalid">Invalid title!</small>
+                <small style="color: green;" *ngIf="lastname.touched && lastname.valid">Valid!</small>
   </div>
 </div><br>
 <div class="row">
   <div class="col-6">
       <label for="phone">Phone</label><br>
-      <input type="text" id="phone" name="phone" placeholder="Enter here">    <br>
+      <input type="text" id="phone" name="phone" placeholder="Enter here" [(ngModel)]="updateform.phone" #phone="ngModel">    <br>
   </div>
   <div class="col-6">
     <label for="mailid">Email</label><br>
-    <input type="email" id="mailid" name="mailid"placeholder="Enter here"><br>
+    <input type="email" id="mailid" name="mailid" placeholder="Enter here" [(ngModel)]="updateform.mailid" #mailid="ngModel"><br>
     
   </div>
 </div><br>
 <div class="row">
   <div class="col-6">
     <label for="gender" style="padding-right: 40px;" >Gender</label><br>
-    <select id="gender"name="gender">
+    <select id="gender"name="gender" [(ngModel)]="updateform.gender" #gender="ngModel">
         <option value="Male">Male</option>
         <option value="Female">Female</option>
         <option value="Other">Other</option>
     </select><br><br> 
   </div>
   <div class="col-6">
-    <label for="experience">Years of experience</label><br>
-    <input type="text" id="experience" name="experience"placeholder="Enter here"><br>
+    <label for="exper">Years of experience</label><br>
+    <input type="text" id="exper" name="exper"placeholder="Enter here" [(ngModel)]="updateform.exper" #exper="ngModel"><br>
     
   </div>
 </div><br>
 <div class="row address">
     <label for="address">Address</label><br>
-    <textarea type="text" id="address" name="address"placeholder="Enter here"></textarea><br>
+    <textarea type="text" id="address" name="address"placeholder="Enter here" [(ngModel)]="updateform.address" #address="ngModel"></textarea><br>
     
 </div>
 
 
   <!-- Sign up button -->
   <button class="btn btn-info my-4 update-btn" type="submit">Update</button>
-
-  <!-- Social register -->
-
-
-
 </form>
-<!-- Default form register -->
-      <!-- <div class="modal-body mx-3">
-        <div class="md-form mb-5">
-          <i class="fas fa-envelope prefix grey-text"></i>
-          <input type="email" id="defaultForm-email" class="form-control validate">
-          <label data-error="wrong" data-success="right" for="defaultForm-email">Your email</label>
-        </div>
-
-        <div class="md-form mb-4">
-          <i class="fas fa-lock prefix grey-text"></i>
-          <input type="password" id="defaultForm-pass" class="form-control validate">
-          <label data-error="wrong" data-success="right" for="defaultForm-pass">Your password</label>
-        </div>
-
-      </div> -->
     </div>
   </div>
 </div>

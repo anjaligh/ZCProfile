@@ -7,6 +7,7 @@ import { educationModel } from '../services/educationModel';
 import { recommendedJobsModel } from '../services/recommendedJobsModel';
 import { jobsHistoryModel } from '../services/jobsHistoryModel';
 
+
 @Component({
   selector: 'app-side-profile',
   templateUrl: './side-profile.component.html',
@@ -26,6 +27,17 @@ export class SideProfileComponent implements OnInit {
   marks=[75,82,87];
   jobMatch=[85,78,89,84,79];
   match='match';
+
+  updateform={
+    firstname:'',
+    lastname:'',
+    phone:'',
+    mailid:'',
+    gender:'',
+    exper:'',
+    address:''
+
+  }
   constructor(private apicall:ApicallsService) { }
 
   ngOnInit(): void {
@@ -47,5 +59,13 @@ export class SideProfileComponent implements OnInit {
       // console.log(this.appliedJobs.length)
     })
   }
-
+  updateProfile(){
+    localStorage.setItem('firstname',this.updateform.firstname);
+    localStorage.setItem('lastname',this.updateform.lastname);
+    localStorage.setItem('phone',this.updateform.phone);
+    localStorage.setItem('mailid',this.updateform.mailid);
+    localStorage.setItem('gender',this.updateform.gender);
+    localStorage.setItem('address',this.updateform.address);
+    alert('added');
+  }
 }
