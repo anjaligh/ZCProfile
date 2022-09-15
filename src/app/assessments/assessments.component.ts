@@ -22,8 +22,8 @@ export class AssessmentsComponent implements OnInit {
   intervwdate = new Date();
   hours:any;
   minutes:any;
-  link='';
-  link1='';
+  link='https://www.youtube.com/embed/8-Fe0kVv3WI';
+  link1='https://www.youtube.com/embed/8-Fe0kVv3WI';
   intervwStage='';
   active3=''
   constructor(private apicall: ApicallsService, private hostElement: ElementRef) { }
