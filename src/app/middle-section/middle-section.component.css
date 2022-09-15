@@ -41,7 +41,7 @@ h5{
     color: #4e5a6d;
     line-height: 16px;
 }
-.column h5{
+#jobmatchpercent{
     color:#3a9f75;
 }
 .progress{
@@ -66,6 +66,9 @@ h5{
     padding: 20px;
     background-color: #f4fff5;
     border: 1px solid #ebedf0;
+    
+}
+.High h5{
     color:#3a9f75;
 }
 .Low{
@@ -76,6 +79,9 @@ h5{
     padding: 20px;
     background-color:#fff0f0 ;
     border: 1px solid #f2d6d1;
+    
+}
+.Low h5{
     color:#eb5757;
 }
 .chance-left p{

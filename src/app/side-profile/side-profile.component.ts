@@ -74,3 +74,4 @@ export class SideProfileComponent implements OnInit {
     alert('Profile edited successfully');
   }
 }
+ 
