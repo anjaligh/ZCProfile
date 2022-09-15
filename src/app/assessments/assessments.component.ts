@@ -2,7 +2,8 @@ import { Component, OnInit } from '@angular/core';
 import { ApicallsService } from '../services/apicalls.service';
 import { assessmentModel } from '../services/assessmentsModel';
 import { faLink } from '@fortawesome/free-solid-svg-icons';
-import { panelModel} from '../services/panelModel'
+import { panelModel} from '../services/panelModel';
+import { ElementRef } from '@angular/core';
 
 @Component({
   selector: 'app-assessments',
@@ -21,10 +22,11 @@ export class AssessmentsComponent implements OnInit {
   intervwdate = new Date();
   hours:any;
   minutes:any;
-  link='https://www.youtube.com/embed/ly36kn0ug4k';
+  link='';
+  link1='';
   intervwStage='';
   active3=''
-  constructor(private apicall: ApicallsService) { }
+  constructor(private apicall: ApicallsService, private hostElement: ElementRef) { }
 
   ngOnInit(): void {
     this.apicall.getassessments().subscribe(data => {
@@ -44,7 +46,11 @@ export class AssessmentsComponent implements OnInit {
     })
   }
 videolink(l:any){
-this.link=l;
+  
+this.link1=l;
+this.link=this.link1.replace("watch?v=","embed/")
+const iframe = this.hostElement.nativeElement.querySelector('iframe');
+ iframe.src = this.link;
 console.log('link');
 console.log(this.link);
 }
